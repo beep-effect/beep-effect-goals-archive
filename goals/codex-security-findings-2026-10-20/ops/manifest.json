@@ -1,0 +1,223 @@
+{
+  "schemaVersion": "initiative-manifest/v2",
+  "initiative": {
+    "id": "codex-security-findings-2026-10-20",
+    "title": "Codex Security Findings (2026-10-20)",
+    "status": "completed-retained",
+    "created": "2026-10-20",
+    "updated": "2026-11-02",
+    "packetAnchorDocument": "SPEC.md"
+  },
+  "packetPath": "goals/codex-security-findings-2026-10-20",
+  "lifecycle": "completed-retained",
+  "mission": "Retain merged proof and verified closure for the eight original Cloud and 123 Dependabot IDs, with final reconciliation in PR #2488, retaining merged implementation PR #2389.",
+  "executionCapable": true,
+  "reflectionRequired": true,
+  "completionGate": {
+    "operator": "yeet",
+    "requiresPullRequest": true,
+    "requiresMergeable": true,
+    "statement": "Final closeout PR #2488 merged through repository gates with genuine final-head canonical readiness; exact eight Cloud IDs and 123 Dependabot alert IDs resolved with merged-revision evidence, retaining implementation PRs #1930, #2333 and #2389; #2416 remains supporting.",
+    "grandfathered": false,
+    "pullRequests": [
+      {
+        "number": 1930,
+        "role": "supporting"
+      },
+      {
+        "number": 2333,
+        "role": "supporting"
+      },
+      {
+        "number": 2389,
+        "role": "supporting"
+      },
+      {
+        "number": 2416,
+        "role": "supporting"
+      },
+      {
+        "number": 2488,
+        "role": "final"
+      }
+    ],
+    "acceptanceEvidence": [
+      {
+        "kind": "hosted-required-checks",
+        "ref": "required",
+        "gating": true
+      },
+      {
+        "kind": "yeet-verdict",
+        "ref": ".beep/yeet/runs/chore_security-findings-closeout-2c19f79cbffa/verdict.json",
+        "gating": true
+      }
+    ]
+  },
+  "branch": "chore/security-findings-closeout",
+  "currentSourceOfTruth": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "goals/codex-security-findings-2026-10-20/README.md",
+    "goals/codex-security-findings-2026-10-20/SPEC.md",
+    "goals/codex-security-findings-2026-10-20/PLAN.md",
+    "goals/codex-security-findings-2026-10-20/GOAL.md",
+    "goals/codex-security-findings-2026-10-20/research/SOURCES.md"
+  ],
+  "researchReports": [
+    "research/2026-10-28-cloud-refresh.md",
+    "research/2026-10-31-revalidation.md",
+    "research/DEPENDABOT.md",
+    "research/OPPORTUNITIES.md",
+    "research/PENDING-PROOF.md",
+    "research/SOURCES.md",
+    "research/WORKING-STATE.md",
+    "research/cheap-gate-triage.md",
+    "research/claim-budget-review-proof.md",
+    "research/claim-index-review-proof.md",
+    "research/cli-package-proof.md",
+    "research/cloud-proof.md",
+    "research/dependabot-fixtures-proof.md",
+    "research/dependabot-fixtures.md",
+    "research/dependabot-python.md",
+    "research/dependabot-rust.md",
+    "research/docx-review-proof.md",
+    "research/hosted-check-test-repair.md",
+    "research/hosted-ci.md",
+    "research/hub-native-crypto-proof.md",
+    "research/independent-security-review.md",
+    "research/labs-timeout-attribution.md",
+    "research/law-practice-coverage-proof.md",
+    "research/packet-state-reconciliation.md",
+    "research/pdf-container-consumer-proof.md",
+    "research/pdf-review-proof.md",
+    "research/round1-docs-proof.md"
+  ],
+  "agentLaunchers": [
+    {
+      "kind": "codex-goal",
+      "path": "GOAL.md",
+      "targetChars": 3500,
+      "maxChars": 4000,
+      "command": "/goal follow the instructions in goals/codex-security-findings-2026-10-20/GOAL.md"
+    }
+  ],
+  "source": {
+    "provider": "Codex Security Cloud MCP app",
+    "repository": "kriegcloud/beep-effect",
+    "url": "https://chatgpt.com/mcp-app/connector_openai_defense_factory/open_defense_factory#/findings",
+    "capturedAt": "2026-10-20",
+    "captureMethodPolicy": "signed-in-csv-export",
+    "rawCaptureRoot": "goals/codex-security-findings-2026-10-20/raw",
+    "rawCaptureTracked": false
+  },
+  "catalog": {
+    "expectedCount": 8,
+    "capturedCount": 8,
+    "severityCountsKnown": true,
+    "severityCounts": {
+      "Low": 3,
+      "Informational": 5
+    },
+    "dispositionCounts": {
+      "remediate": 8,
+      "already-fixed": 0,
+      "false-positive": 0,
+      "out-of-scope": 0,
+      "untriaged": 0
+    },
+    "note": "All eight Cloud IDs verified Fixed; original dependency catalog has 121 fixed alerts and two explicitly withdrawn alerts (#426 and #431)."
+  },
+  "closeoutPolicy": {
+    "fixed": "Fixed",
+    "alreadyFixed": "Fixed",
+    "dismissedInvalid": "False positive",
+    "outOfScope": "False positive",
+    "acceptedRisk": "not allowed"
+  },
+  "dispositionPolicy": {
+    "default": "remediate",
+    "acceptedRiskAllowed": false,
+    "falsePositiveThreshold": "strict current-HEAD proof that affected code is absent, unreachable, non-shipped, already fixed, or materially misunderstood",
+    "fixPhilosophy": "minimal shared-root fixes with focused regression proof; reuse canonical repo helpers after live source and barrel discovery"
+  },
+  "sanitation": {
+    "trackedRawFindingContent": false,
+    "rawCaptureLocation": "goals/codex-security-findings-2026-10-20/raw",
+    "commitsOnlySanitizedMarkdown": true,
+    "codexPatchTextTracked": false,
+    "publicFindingPolicy": "Tracked records contain title, severity, Codex ID, source commit, public summary, decisions, changed files, and verification only."
+  },
+  "phases": [
+    {
+      "id": "P0",
+      "name": "Bootstrap",
+      "status": "complete"
+    },
+    {
+      "id": "P1",
+      "name": "Capture",
+      "status": "complete"
+    },
+    {
+      "id": "P2",
+      "name": "Validate",
+      "status": "complete"
+    },
+    {
+      "id": "P3",
+      "name": "Lane partition",
+      "status": "complete"
+    },
+    {
+      "id": "P4",
+      "name": "Remediate",
+      "status": "complete"
+    },
+    {
+      "id": "P5",
+      "name": "Repo proof",
+      "status": "complete"
+    },
+    {
+      "id": "P6",
+      "name": "Publish",
+      "status": "complete"
+    },
+    {
+      "id": "P7",
+      "name": "Monitor",
+      "status": "complete"
+    },
+    {
+      "id": "P8",
+      "name": "Merge and close findings",
+      "status": "complete"
+    },
+    {
+      "id": "P9",
+      "name": "Close",
+      "status": "complete"
+    }
+  ],
+  "verificationCommands": [
+    "test \"$(wc -m < goals/codex-security-findings-2026-10-20/GOAL.md)\" -le 4000",
+    "jq . goals/codex-security-findings-2026-10-20/ops/manifest.json",
+    "jq . goals/codex-security-findings-2026-10-20/ops/triage.json",
+    "test \"$(find goals/codex-security-findings-2026-10-20/findings -maxdepth 1 -name 'CSF-*.md' | wc -l | tr -d ' ')\" = 8",
+    "git diff --check -- goals/codex-security-findings-2026-10-20",
+    "jq -r '.findings[].commit' goals/codex-security-findings-2026-10-20/ops/triage.json | while read -r c; do git merge-base --is-ancestor \"$c\" HEAD || echo \"not-an-ancestor: $c\"; done",
+    "bun run beep lint reflection-artifacts"
+  ],
+  "stopConditions": [
+    "The signed-in export is unavailable or the detail evidence needed for a verdict cannot be obtained.",
+    "Tracked evidence contains secrets, auth values, signed URLs, email addresses, or raw developer-local paths.",
+    "A remediation requires an architecture or product decision outside packet scope.",
+    "The same blocker repeats after reasonable investigation."
+  ],
+  "statusNote": "Implementation PR #2389 and reconciliation PR #2416 are merged; #2416's retained verdict is closeout-mode and bound to a pre-merge head, so it cannot qualify completion. Final closeout PR #2488 carries a publish verdict at its exact final head. External dependency, code-scanning and secret-scanning inventories were zero-open on 2026-11-01.",
+  "closeout": {
+    "status": "completed-retained",
+    "finalPullRequest": 2488
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "initiative-manifest/v2",
+  "initiative": {
+    "id": "ci-fleet-residue",
+    "title": "CI Fleet Residue",
+    "status": "completed-retained",
+    "created": "2026-08-13",
+    "updated": "2026-08-24",
+    "packetAnchorDocument": "SPEC.md"
+  },
+  "packetPath": "goals/ci-fleet-residue",
+  "lifecycle": "completed-retained",
+  "statusNote": "Split from ci-fleet-endgame on 2026-08-13; closed 2026-08-24. P3 shipped 2026-08-13 (#686). P2 hook deployed 2026-08-14 and validated live (Gate E + red-team, run 31779611279). P0 activated 2026-08-16 (#718 + #725, pin ami-07fb13d84a42d3584, baked fast path probed live). P1 revert deployed 2026-08-16 (#730); tripwire week through 2026-08-23 closed calm with zero interruption-attributed re-runs (research/p1-tripwire-week-evidence.md). Spot posture stands; the >2/week tripwire remains the ongoing operational rule.",
+  "mission": "Retire the fleet endgame's deferred residue - baked AMI, spot posture, IMDS job-hook isolation with red-team re-run, and the yeet closeout writer bug - each as its own scoped PR.",
+  "executionCapable": true,
+  "reflectionRequired": true,
+  "provenance": {
+    "goal": "goals/ci-fleet-endgame",
+    "graduated": "2026-08-13",
+    "note": "P4 and the accepted-risk residue recorded in the P2/P3 statusNotes and the packet ledger."
+  },
+  "completionGate": {
+    "operator": "yeet",
+    "requiresPullRequest": true,
+    "requiresMergeable": true,
+    "statement": "Not achieved until every item ships (or is re-deferred with a dated decision) through PRs driven to mergeable via /yeet.",
+    "grandfathered": false
+  },
+  "currentSourceOfTruth": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "goals/ci-fleet-residue/README.md",
+    "goals/ci-fleet-residue/SPEC.md",
+    "goals/ci-fleet-residue/PLAN.md",
+    "goals/ci-fleet-residue/GOAL.md",
+    "goals/ci-fleet-endgame/research/runner-endgame-decision-record.md"
+  ],
+  "researchReports": [
+    "research/OPPORTUNITIES.md",
+    "research/p0-activation-evidence.md",
+    "research/p0-baked-ami-design-brief.md",
+    "research/p1-spot-revert-baseline.md",
+    "research/p1-tripwire-week-evidence.md",
+    "research/p1-tripwire-week-raw/README.md",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95216658480.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95227646233.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95236021293.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95261721889.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95261722012.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95273506897.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95354812245.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95411859610.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95415229097.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95418452570.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95418452585.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95418452596.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95420323575.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95420324181.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95424735409.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95424735464.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95424735496.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95426825024.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95464176124.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95543690619.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-95566721042.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-97264522737.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/annotations-97318717263.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/job-95420324181.log",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-31968275700.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-31972763300.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-31976213181.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-31986265095.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-31990662540.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-32019107679.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-32037908618.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-32039140806.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-32040357343-attempt2.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-32040357343.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-32042697673.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-32043502828.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-32055369976.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-32080950731.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-32088793049.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-32668069065.json",
+    "research/p1-tripwire-week-raw/rerun-evidence/jobs-32688837330.json",
+    "research/p1-tripwire-week-raw/reruns.jsonl",
+    "research/p1-tripwire-week-raw/runs-window.jsonl",
+    "research/p2-acceptance-evidence.md",
+    "research/p2-imds-job-hook-design-brief.md"
+  ],
+  "agentLaunchers": [
+    {
+      "kind": "codex-goal",
+      "path": "GOAL.md",
+      "targetChars": 3500,
+      "maxChars": 4000,
+      "command": "/goal follow the instructions in goals/ci-fleet-residue/GOAL.md"
+    }
+  ],
+  "phases": [
+    {
+      "id": "P0",
+      "name": "Lockfile-keyed baked AMI",
+      "status": "complete"
+    },
+    {
+      "id": "P1",
+      "name": "Spot posture revert",
+      "status": "complete"
+    },
+    {
+      "id": "P2",
+      "name": "CSF-003 IMDS job hook and red-team re-run",
+      "status": "complete"
+    },
+    {
+      "id": "P3",
+      "name": "Yeet closeout writer encoding fix",
+      "status": "complete"
+    },
+    {
+      "id": "P4",
+      "name": "Close",
+      "status": "complete"
+    }
+  ],
+  "verificationCommands": [
+    "test \"$(wc -m < goals/ci-fleet-residue/GOAL.md)\" -le 4000",
+    "jq . goals/ci-fleet-residue/ops/manifest.json",
+    "bun run beep goals doctor",
+    "git diff --check -- goals/ci-fleet-residue"
+  ],
+  "stopConditions": [
+    "A change would weaken fork-PR, cache-write, IAM, egress, or teardown rails.",
+    "Spot revert while the interruption tripwire lacks a monitored week of baseline.",
+    "The IMDS hook fails Gate E - roll back and record, never force through."
+  ]
+}
