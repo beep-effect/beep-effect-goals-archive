@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "initiative-manifest/v2",
+  "initiative": {
+    "id": "knowledge-surface-automation",
+    "title": "Knowledge-Surface Audit & Automation",
+    "status": "completed-retained",
+    "created": "2026-07-31",
+    "updated": "2026-10-16",
+    "packetAnchorDocument": "SPEC.md"
+  },
+  "packetPath": "goals/knowledge-surface-automation",
+  "lifecycle": "completed-retained",
+  "mission": "Turn the agent-facing knowledge surfaces (goals, explorations, skills, agent docs) into audited, gated, self-proving infrastructure with permanent new-violation gates.",
+  "statusNote": "Completed 2026-10-16. All five workstreams shipped; Ritual 1 classified the vendored patches (#1826); the first sealed knowledge baseline (#1790, minted by beep-knowledge-mint[bot]) is on main and the knowledge-doctor gate is live. Closeout reflection: history/reflections/2026-10-16-claude.md.",
+  "executionCapable": true,
+  "reflectionRequired": true,
+  "provides": [
+    "knowledge/doctor",
+    "skills/warehouse",
+    "goals/graph",
+    "goals/bootstrap"
+  ],
+  "completionGate": {
+    "operator": "yeet",
+    "requiresPullRequest": true,
+    "requiresMergeable": true,
+    "statement": "Not achieved until this goal's work ships as a PR driven to mergeable via /yeet (bun run beep yeet repair -> verify -> publish --pr -> monitor).",
+    "grandfathered": false
+  },
+  "currentSourceOfTruth": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "goals/knowledge-surface-automation/README.md",
+    "goals/knowledge-surface-automation/SPEC.md",
+    "goals/knowledge-surface-automation/PLAN.md",
+    "goals/knowledge-surface-automation/GOAL.md",
+    "goals/knowledge-surface-automation/research/SOURCES.md"
+  ],
+  "researchReports": [
+    "research/2026-08-13-compound-engineering-capture.md",
+    "research/OPPORTUNITIES.md",
+    "research/SOURCES.md",
+    "research/cli-ground-truth.md",
+    "research/p1-bootstrap-adopt-plan-design.md",
+    "research/p1-context-pruning-analysis.md",
+    "research/p1-execution-decisions.md",
+    "research/p1-fp-eyeball-verdicts.md",
+    "research/p1-knowledge-finding-schema-design.md",
+    "research/p1-manifest-capability-extension-design.md",
+    "research/p1-refs-tree-design.md",
+    "research/p1-report-bootstrap-adopt-plan.md",
+    "research/p1-report-manifest-capabilities.md",
+    "research/p1-report-refs-tree.md",
+    "research/p1-report-semantic-delta.md",
+    "research/p1-report-skills-provenance.md",
+    "research/p1-skill-upstream-resolution.md",
+    "research/p1-t2-mini-grill-decisions.md",
+    "research/p2-grill-decisions.md",
+    "research/p3-hermetic-lane-decisions.md",
+    "research/p3-hermetic-lane-design.md",
+    "research/p3-report-refs-rewrite.md",
+    "research/p3-report-roadmap-refs-fold-in.md",
+    "research/p4-explore-graduate-design.md",
+    "research/p4-goals-materialize-design.md",
+    "research/p4-goals-projection-decisions.md",
+    "research/p4-goals-projection-design.md",
+    "research/p4-knowledge-doctor-design.md",
+    "research/p4-report-goals-projection.md",
+    "research/p4-report-knowledge-doctor.md",
+    "research/p4-report-skills-lock-plan.md",
+    "research/p4-skills-warehouse-design.md",
+    "research/p5-warehouse-update-train-design.md",
+    "research/prior-ritual-lessons.md",
+    "research/surface-inventory.md"
+  ],
+  "agentLaunchers": [
+    {
+      "kind": "codex-goal",
+      "path": "GOAL.md",
+      "targetChars": 3500,
+      "maxChars": 4000,
+      "command": "/goal follow the instructions in goals/knowledge-surface-automation/GOAL.md"
+    }
+  ],
+  "phases": [
+    {
+      "id": "P0",
+      "name": "Seed: packet + prior-ritual lessons",
+      "status": "complete"
+    },
+    {
+      "id": "P1",
+      "name": "Phase-0 read-only reports",
+      "status": "complete"
+    },
+    {
+      "id": "P2",
+      "name": "Grill remaining decisions (docs-only PR)",
+      "status": "complete"
+    },
+    {
+      "id": "P3",
+      "name": "Workstream A rewrite + hermetic byte gates; C Stage-1 gate",
+      "status": "complete"
+    },
+    {
+      "id": "P4",
+      "name": "Workstreams B, D, E behind gates; C Stage 2",
+      "status": "complete"
+    },
+    {
+      "id": "P5",
+      "name": "Renovate schedule + recurring review ritual",
+      "status": "complete"
+    },
+    {
+      "id": "P6",
+      "name": "Close",
+      "status": "complete"
+    }
+  ],
+  "verificationCommands": [
+    "test \"$(wc -m < goals/knowledge-surface-automation/GOAL.md)\" -le 4000",
+    "jq . goals/knowledge-surface-automation/ops/manifest.json",
+    "rg -n \"knowledge-surface-automation|GOAL.md|agentLaunchers|packetAnchorDocument\" goals/knowledge-surface-automation",
+    "git diff --check -- goals/knowledge-surface-automation",
+    "bun run beep lint reflection-artifacts",
+    "! rg -n \"/home/|~/YeeBois\" goals/knowledge-surface-automation --glob '!**/ops/manifest.json' --glob '!**/research/surface-inventory.md'"
+  ],
+  "stopConditions": [
+    "Required source files are missing or materially contradictory.",
+    "The implementation would exceed named scope.",
+    "Verification requires unnamed credentials, cost, destructive side effects, or policy approval.",
+    "The same blocker repeats after reasonable investigation.",
+    "Any mutation pass would run before the corresponding Phase-0 read-only report's false-positive rate has been eyeballed.",
+    "A gate's false-positive rate cannot be driven down without weakening normalization or widening exemption markers into a laundering API; stop and grill instead.",
+    "A ratified decision (Stage-1 diff-scoped gates, manifest-derived status, bun:sqlite projection, patches-before-semantic-guides) would need reopening."
+  ]
+}

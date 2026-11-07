@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "initiative-manifest/v2",
+  "initiative": {
+    "id": "effect-reference-workspace",
+    "title": "Effect Reference Workspace",
+    "status": "completed-retained",
+    "created": "2026-09-25",
+    "updated": "2026-09-28",
+    "packetAnchorDocument": "SPEC.md"
+  },
+  "packetPath": "goals/effect-reference-workspace",
+  "lifecycle": "completed-retained",
+  "statusNote": "Closed 2026-09-28. The deliverable is the workspace, tooling, nightly timer, and the cooldown fix (PR #1311). The first two scheduled nights are recorded (2026-09-26 exit 130 on a user-manager restart, 2026-09-27 model cooldown). Reading back the first clean scheduled night is an operator follow-up recorded in research/OPPORTUNITIES.md when it lands.",
+  "mission": "Consolidate the Effect reference clones into the manifest-configured reference root as a graft workspace with a nightly claude-opus-5 deep tier, reachable from every beep checkout via manifest-provisioned .repos links.",
+  "executionCapable": true,
+  "reflectionRequired": true,
+  "provenance": {
+    "grill": "2026-09-25 grill-me session (Fable 5.1); no exploration packet"
+  },
+  "completionGate": {
+    "operator": "yeet",
+    "requiresPullRequest": true,
+    "requiresMergeable": true,
+    "statement": "Not achieved until this goal's work ships as a PR driven to mergeable via /yeet (bun run beep yeet: repair -> verify -> publish --pr -> monitor).",
+    "grandfathered": false
+  },
+  "currentSourceOfTruth": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "goals/effect-reference-workspace/README.md",
+    "goals/effect-reference-workspace/SPEC.md",
+    "goals/effect-reference-workspace/PLAN.md",
+    "goals/effect-reference-workspace/GOAL.md",
+    "goals/effect-reference-workspace/research/SOURCES.md",
+    "goals/effect-reference-workspace/research/2026-09-25-00-aligned-design.md"
+  ],
+  "researchReports": [
+    "research/2026-09-25-00-aligned-design.md",
+    "research/2026-09-25-01-current-state.md",
+    "research/2026-09-25-02-fleet-census.md",
+    "research/OPPORTUNITIES.md",
+    "research/SOURCES.md"
+  ],
+  "agentLaunchers": [
+    {
+      "kind": "codex-goal",
+      "path": "GOAL.md",
+      "targetChars": 3500,
+      "maxChars": 4000,
+      "command": "/goal follow the instructions in goals/effect-reference-workspace/GOAL.md"
+    }
+  ],
+  "phases": [
+    {
+      "id": "P0",
+      "name": "Research",
+      "status": "complete"
+    },
+    {
+      "id": "P1",
+      "name": "Implement",
+      "status": "complete"
+    },
+    {
+      "id": "P2",
+      "name": "Verify",
+      "status": "complete"
+    },
+    {
+      "id": "P3",
+      "name": "Yeet: PR to mergeable",
+      "status": "complete"
+    },
+    {
+      "id": "P4",
+      "name": "Close",
+      "status": "complete",
+      "exit": "Reflection lints; README, PLAN, and manifest updated; first two scheduled nights recorded. The first clean scheduled night's readback is an operator follow-up in research/OPPORTUNITIES.md."
+    }
+  ],
+  "evidence": [
+    "history/2026-09-25-s4-move.md",
+    "history/2026-09-25-p2-p3-closeout.md",
+    "history/reflections/2026-09-28-fable.md",
+    "research/OPPORTUNITIES.md"
+  ]
+}
