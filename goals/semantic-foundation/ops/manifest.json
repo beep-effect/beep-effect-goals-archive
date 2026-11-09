@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "initiative-manifest/v2",
+  "initiative": {
+    "id": "semantic-foundation",
+    "title": "Semantic Foundation",
+    "status": "completed-retained",
+    "created": "2026-07-08",
+    "updated": "2026-10-10",
+    "packetAnchorDocument": "SPEC.md"
+  },
+  "packetPath": "goals/semantic-foundation",
+  "lifecycle": "completed-retained",
+  "statusNote": "Reopened 2026-10-09 for M2 and M3 as ready slices for oppold-corpus-semantic-ingestion-v2; M4 routed to the legal-document-intake P4 lane.",
+  "executionCapable": true,
+  "reflectionRequired": true,
+  "provenance": {
+    "exploration": "explorations/legal-ontology-landscape",
+    "graduated": "2026-07-08",
+    "links": [
+      "explorations/legal-ontology-landscape/DECISIONS.md",
+      "explorations/legal-ontology-landscape/BRIEF.md",
+      "explorations/legal-ontology-landscape/MAP.md",
+      "explorations/legal-ontology-landscape/research/"
+    ]
+  },
+  "completionGate": {
+    "operator": "yeet",
+    "requiresPullRequest": true,
+    "requiresMergeable": true,
+    "statement": "Not achieved until this goal's work ships as a PR driven to mergeable via /yeet (bun run beep yeet: repair -> verify -> publish --pr -> monitor).",
+    "grandfathered": false
+  },
+  "currentSourceOfTruth": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "goals/semantic-foundation/README.md",
+    "goals/semantic-foundation/SPEC.md",
+    "goals/semantic-foundation/PLAN.md",
+    "goals/semantic-foundation/GOAL.md",
+    "goals/semantic-foundation/research/README.md",
+    "explorations/legal-ontology-landscape/DECISIONS.md",
+    "explorations/legal-ontology-landscape/BRIEF.md",
+    "explorations/legal-ontology-landscape/MAP.md"
+  ],
+  "researchReports": [
+    "research/2026-07-25-academia-corpus-mining-note.md",
+    "research/2026-10-09-m2-classification-contract.md",
+    "research/2026-10-09-m2-licence-ledger.md",
+    "research/2026-10-09-m3-adversarial-review.md",
+    "research/2026-10-09-m3-blinded-category-review.md",
+    "research/2026-10-09-m3-kind-role-audit.md",
+    "research/2026-10-09-m3-vocabulary-contract.md",
+    "research/OPPORTUNITIES.md",
+    "research/README.md"
+  ],
+  "agentLaunchers": [
+    {
+      "kind": "codex-goal",
+      "path": "GOAL.md",
+      "targetChars": 3500,
+      "maxChars": 4000,
+      "command": "/goal follow the instructions in goals/semantic-foundation/GOAL.md"
+    }
+  ],
+  "phases": [
+    {
+      "id": "M1",
+      "name": "Intake-Serving Semantic Seed",
+      "status": "complete"
+    },
+    {
+      "id": "M2",
+      "name": "Classification Schemes",
+      "status": "complete"
+    },
+    {
+      "id": "M3",
+      "name": "Docketing and Party Roles",
+      "status": "complete"
+    },
+    {
+      "id": "M4",
+      "name": "ClaimGate Shapes",
+      "status": "pending"
+    },
+    {
+      "id": "P3",
+      "name": "Yeet: PR to mergeable",
+      "status": "complete"
+    },
+    {
+      "id": "P4",
+      "name": "Close",
+      "status": "complete"
+    }
+  ],
+  "verificationCommands": [
+    "test \"$(wc -m < goals/semantic-foundation/GOAL.md)\" -le 4000",
+    "jq . goals/semantic-foundation/ops/manifest.json",
+    "rg -n \"semantic-foundation|GOAL.md|agentLaunchers|packetAnchorDocument\" goals/semantic-foundation",
+    "git diff --check -- goals/semantic-foundation explorations/legal-ontology-landscape explorations/ATLAS.md",
+    "hosted CI on the PR",
+    "bun run beep lint reflection-artifacts"
+  ],
+  "stopConditions": [
+    "Required source files are missing or materially contradictory.",
+    "The implementation would exceed M1-M3 or pull M4 work forward without the named gate.",
+    "The former ontology-survey packet was removed 2026-07-14, so its edit fence is moot; stop if work exceeds the scope absorbed from explorations/legal-ontology-landscape or requires law-practice domain entities, document-intake workflow code, graph-store wiring, or SPARQL engine wiring.",
+    "Verification requires unnamed credentials, cost, destructive side effects, or policy approval.",
+    "The same blocker repeats after reasonable investigation."
+  ],
+  "researchReferences": [
+    "../../explorations/legal-ontology-landscape/research/",
+    "../../explorations/legal-ontology-landscape/research/01-direction-grounding.md",
+    "../../explorations/legal-ontology-landscape/research/README.md"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "initiative-manifest/v2",
+  "initiative": {
+    "id": "ship-velocity",
+    "title": "Ship Velocity",
+    "status": "completed-retained",
+    "created": "2026-08-13",
+    "updated": "2026-09-02",
+    "packetAnchorDocument": "SPEC.md"
+  },
+  "packetPath": "goals/ship-velocity",
+  "lifecycle": "completed-retained",
+  "statusNote": "Closed 2026-09-02 pending merge of the successor final-evidence PR. Digest-only evidence retracted the mirror-drift hypothesis: checkout references pointed at a February developer item, while the infra-vault read-only item still matched its SSM source. The helper gained explicit reference replacement and corrected or completed 27 ignored read-only quads. A six-root frozen sample produced five 8/8 first-touch remote-hit roots including the main checkout and one GET-200 authenticated-cold root on a different revision and lockfile, with zero cache authentication failures. One remote-hit root required a separately labelled TURBO-only canary because an unrelated reference failed its exact all-file wrapper before HTTP. The branch goals/ship-velocity-cache-auth-evidence carries this evidence, the P5 and lifecycle flip, and the closeout reflection. PR #937 remains historical and did not satisfy the final PR gate; the successor must still reach terminal Yeet merge-ready status before merge. research/metrics-closeout.md and research/cache-proof.md own the receipts.",
+  "mission": "Agents ship correct code faster: sub-minute failure backpressure into an active session with a hard P0 Stop gate, local verify that near-guarantees the 17 required remote checks, readable+warm Turbo cache in every checkout, memory-aware concurrent verify/publish, and no derived-file merge treadmill.",
+  "executionCapable": true,
+  "reflectionRequired": true,
+  "provenance": {
+    "goal": "goals/speed-loop",
+    "graduated": "2026-08-13",
+    "note": "Successor surface for speed-loop/repo-quality-throughput/quality-speedup threads plus the 2026-08-13 nine-lane fan-out (codex Sol + grok 4.6) and ADHD backpressure divergence; carries the open monitor/parity/cache/concurrency/hot-file items those retained packets parked."
+  },
+  "completionGate": {
+    "operator": "yeet",
+    "requiresPullRequest": true,
+    "requiresMergeable": true,
+    "statement": "Not achieved until representative production evidence shows: backpressure reaches an active session within 60 seconds and unacknowledged P0 work blocks Stop, the parity ledger records zero recurring locally-catchable required-check failures, every sibling checkout reads the remote cache, at least two concurrent verifies run under admission without OOM, hot-file conflicts no longer force PR rework, and the final PR is driven to mergeable via yeet. On 2026-08-30 the operator authorized the observed 24-hour event volume as representative in place of the original seven-day duration proxy. Operator PR #921 separately superseded the automatic takeover condition by removing published-PR ownership state; no takeover success is claimed.",
+    "grandfathered": false
+  },
+  "currentSourceOfTruth": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "goals/ship-velocity/README.md",
+    "goals/ship-velocity/SPEC.md",
+    "goals/ship-velocity/PLAN.md",
+    "goals/ship-velocity/GOAL.md"
+  ],
+  "researchReports": [
+    "research/OPPORTUNITIES.md",
+    "research/adhd-ideation.md",
+    "research/branch-protection-contexts.json",
+    "research/c1-raw-failures.txt",
+    "research/c2-yeet-monitor-backpressure.md",
+    "research/c3-local-remote-parity.md",
+    "research/c4-turbo-cache.md",
+    "research/c5-concurrency-policy.md",
+    "research/c6-conflicts-queue.md",
+    "research/c7-opportunities.md",
+    "research/cache-proof.md",
+    "research/d1-admission-scheduler.md",
+    "research/g1-external-research.md",
+    "research/g2-design-ideas.md",
+    "research/merge-queue-evaluation.md",
+    "research/metrics-baseline.md",
+    "research/metrics-closeout.md",
+    "research/metrics-observation-2026-08-30.md",
+    "research/parity-ledger.md",
+    "research/stacked-pr-trial.md"
+  ],
+  "agentLaunchers": [
+    {
+      "kind": "codex-goal",
+      "path": "GOAL.md",
+      "targetChars": 3500,
+      "maxChars": 4000,
+      "command": "/goal follow the instructions in goals/ship-velocity/GOAL.md"
+    }
+  ],
+  "phases": [
+    {
+      "id": "P0",
+      "name": "Ratify and baseline",
+      "status": "complete"
+    },
+    {
+      "id": "P1",
+      "name": "Instant wins",
+      "status": "complete"
+    },
+    {
+      "id": "P2",
+      "name": "Backpressure engine",
+      "status": "complete"
+    },
+    {
+      "id": "P3",
+      "name": "Full parity",
+      "status": "complete"
+    },
+    {
+      "id": "P4",
+      "name": "Concurrency and cache proof",
+      "status": "complete"
+    },
+    {
+      "id": "P5",
+      "name": "Hot-file endgame and close",
+      "status": "complete"
+    }
+  ],
+  "verificationCommands": [
+    "test \"$(wc -m < goals/ship-velocity/GOAL.md)\" -le 4000",
+    "jq . goals/ship-velocity/ops/manifest.json",
+    "bun run beep goals doctor",
+    "git diff --check -- goals/ship-velocity"
+  ],
+  "stopConditions": [
+    "Any backpressure enforcement (hook deny, Stop veto, poison-pill) deadlocks a session or checkout - severity gates and waives must ship with the enforcement, never after.",
+    "Admission or auto-heal would mutate state it cannot attribute (foreign lease, malformed lock, baseline regeneration) - fail loud and stop.",
+    "PR remote-cache reads (C2), the INDEX end-state change (E2), or path-filtered required checks (E6) proceed without their recorded operator decision note.",
+    "A parity change weakens a security lane (gitleaks pinning, OSV, fork isolation) to make local green easier."
+  ]
+}
