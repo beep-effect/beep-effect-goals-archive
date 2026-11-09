@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "exploration-manifest/v1",
+  "exploration": {
+    "slug": "pulumi-to-alchemy",
+    "title": "Pulumi to Alchemy",
+    "status": "graduated",
+    "stage": "graduate",
+    "openQuestions": [
+      "Target: no TypeScript 6 in infra/ (option C suffices) or no Pulumi (A, or B converging on A)?",
+      "Policy: new infrastructure Alchemy-first? Canonical Alchemy state store (Cloudflare store vs S3 lease state), and do the r2-cache stacks leave local state?",
+      "OIP hosting: stay on Vercel (Pulumi keeps opip-web, or Vercel config leaves IaC) or move apps/oip-web to Cloudflare Workers via OpenNext?",
+      "Retire the never-applied beep-storybook Pulumi program (and its Vercel project) now?",
+      "Runner fleet: keep the Terraform module on Pulumi indefinitely or schedule a replacement (GitHub-hosted runners vs Alchemy-native composite)?",
+      "Host stacks (AI metrics, OpenClaw): Pulumi, Alchemy custom resources, or the Effect CLI that already renders them?",
+      "Appetite for the credential-free option-C spike: compiled-JS pulumi preview with typescript:false plus a TS7-built ghaRunners SDK?",
+      "Account singletons (cost-allocation tags, Compute Optimizer / Cost Optimization Hub enrollments): thin custom resources or out of IaC into the cost runbook?"
+    ],
+    "sources": ["research/SOURCES.md"],
+    "links": {
+      "goals": [
+        "goals/infra-alchemy-rebuild",
+        "goals/scripts-to-beep-cli",
+        "goals/python-free-repo"
+      ],
+      "docs": [],
+      "supersededBy": null
+    },
+    "created": "2026-10-15",
+    "updated": "2026-11-06"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "exploration-manifest/v1",
+  "exploration": {
+    "slug": "typed-agent-skill-contracts",
+    "title": "Typed Agent Skill Contracts",
+    "status": "graduated",
+    "stage": "graduate",
+    "openQuestions": [],
+    "sources": ["research/SOURCES.md"],
+    "links": {
+      "goals": [
+        "goals/skill-contract-kernel",
+        "goals/skill-contract-gate-certificates"
+      ],
+      "docs": [],
+      "supersededBy": null
+    },
+    "created": "2026-08-10",
+    "updated": "2026-10-14"
+  }
+}

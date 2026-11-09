@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "exploration-manifest/v1",
+  "exploration": {
+    "slug": "gpu-document-ocr",
+    "title": "GPU Document OCR",
+    "status": "killed",
+    "stage": "align",
+    "openQuestions": [],
+    "sources": ["research/SOURCES.md"],
+    "links": {
+      "goals": [],
+      "docs": [],
+      "supersededBy": null
+    },
+    "created": "2026-10-06",
+    "updated": "2026-10-09"
+  }
+}

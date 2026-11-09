@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "exploration-manifest/v1",
+  "exploration": {
+    "slug": "pr-event-awareness",
+    "title": "PR Event Awareness for Orchestrating Agents",
+    "status": "graduated",
+    "stage": "graduate",
+    "openQuestions": [],
+    "sources": ["research/SOURCES.md"],
+    "links": {
+      "goals": ["goals/yeet-pr-events"],
+      "docs": [],
+      "supersededBy": null
+    },
+    "created": "2026-09-12",
+    "updated": "2026-09-25"
+  }
+}

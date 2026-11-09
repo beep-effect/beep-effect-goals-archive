@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "exploration-manifest/v1",
+  "exploration": {
+    "slug": "practice-office-provisioning",
+    "title": "Practice Office Provisioning",
+    "status": "graduated",
+    "stage": "graduate",
+    "openQuestions": [
+      "DEFERRED to practice-mail-backfill P0: CSP/New Commerce quote for the EOP2 seat + dry-run license assignment; Microsoft support case adjudicating the >100 GB auto-expanding-archive contradiction before tranche 2/3.",
+      "DEFERRED to practice-box-provisioning P0: Box quote items (Governance-on-Business, Business Plus, Enterprise Plus bundling, Shield, collaborator-seat pricing) and the CCG platform-app approval flow on the Business plan.",
+      "DEFERRED to freshbooks-driver P0: live request-limit numbers, webhook retry/disable schedule, and the invoice-PDF endpoint verdict against the existing dev app.",
+      "Gated re-entries (reopen at decompose when a gate fires — see MAP.md): practice-sign-invoice-flow; practice-walkthroughs."
+    ],
+    "sources": ["research/SOURCES.md"],
+    "links": {
+      "goals": [
+        "goals/practice-box-provisioning",
+        "goals/practice-m365-contacts",
+        "goals/practice-mail-backfill",
+        "goals/freshbooks-driver"
+      ],
+      "docs": [],
+      "supersededBy": null
+    },
+    "created": "2026-08-30",
+    "updated": "2026-09-09"
+  }
+}
