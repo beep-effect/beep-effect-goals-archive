@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "exploration-manifest/v1",
+  "exploration": {
+    "slug": "atlas-synthesis",
+    "title": "Atlas Synthesis \u2014 Current State <-> Goals/Vision Grounding",
+    "status": "graduated",
+    "stage": "graduate",
+    "openQuestions": [],
+    "links": {
+      "goals": [
+        "goals/epistemic-claim-lifecycle-gate",
+        "goals/law-practice-office-action-spike"
+      ],
+      "docs": [
+        "docs/PROSE_TO_PROOF_VISION.md",
+        "docs/product/prose-to-proof.md",
+        "docs/BEEPGRAPH_ARCHITECTURE.md",
+        "docs/PROSE_TO_PROOF_ARCHITECTURE_MAP.md",
+        "standards/ARCHITECTURE.md",
+        "standards/memory-architecture/00-no-escape-theorem.md"
+      ],
+      "supersededBy": null
+    },
+    "created": "2026-06-17",
+    "updated": "2026-08-13"
+  }
+}

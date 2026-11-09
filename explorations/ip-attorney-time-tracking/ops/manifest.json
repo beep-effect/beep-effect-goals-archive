@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "exploration-manifest/v1",
+  "exploration": {
+    "slug": "ip-attorney-time-tracking",
+    "title": "IP Attorney Time Tracking",
+    "status": "graduated",
+    "stage": "graduate",
+    "openQuestions": [],
+    "links": {
+      "goals": ["goals/law-time-capture-spine"],
+      "docs": ["docs/product/ip-attorney-time-tracking.md"],
+      "supersededBy": null
+    },
+    "created": "2026-06-18",
+    "updated": "2026-08-13",
+    "sources": ["research/SOURCES.md"]
+  }
+}

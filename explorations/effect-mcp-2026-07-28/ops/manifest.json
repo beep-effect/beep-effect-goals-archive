@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "exploration-manifest/v1",
+  "exploration": {
+    "slug": "effect-mcp-2026-07-28",
+    "title": "Effect MCP 2026-07-28 Stateless Protocol Adoption",
+    "status": "graduated",
+    "stage": "graduate",
+    "openQuestions": [],
+    "sources": ["research/SOURCES.md"],
+    "links": {
+      "goals": [
+        "goals/mcp-stateless-kit-and-drivers",
+        "goals/ontology-sidecar-stateless-identity"
+      ],
+      "docs": [],
+      "supersededBy": null
+    },
+    "created": "2026-09-16",
+    "updated": "2026-09-22"
+  }
+}

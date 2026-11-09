@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "exploration-manifest/v1",
+  "exploration": {
+    "slug": "computable-workspace-geometry",
+    "title": "Computable Workspace Geometry — pretext × dock kernel × blocks",
+    "status": "graduated",
+    "stage": "graduate",
+    "openQuestions": [],
+    "sources": ["RESEARCH.md"],
+    "links": {
+      "goals": [
+        "goals/pretext-driver",
+        "goals/dock-substrate-landing",
+        "goals/thread-virtualization"
+      ],
+      "docs": ["docs/product/workspace-substrate.md"],
+      "supersededBy": null
+    },
+    "created": "2026-07-12",
+    "updated": "2026-08-13"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "exploration-manifest/v1",
+  "exploration": {
+    "slug": "deterministic-doc-structure-extraction",
+    "title": "Deterministic Legal Document Structure Extraction",
+    "status": "graduated",
+    "stage": "graduate",
+    "openQuestions": [],
+    "links": {
+      "goals": ["goals/law-doc-structure-oa-slice"],
+      "docs": [],
+      "supersededBy": null
+    },
+    "created": "2026-06-29",
+    "updated": "2026-08-13",
+    "sources": ["research/SOURCES.md"]
+  }
+}
